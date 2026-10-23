@@ -1,6 +1,15 @@
 #!/bin/sh
 
 {{ range .packages.curl -}}
-echo "Installing {{.name}}"
-/bin/bash -c "$(curl -fsSL {{ .url | quote }})"{{ with (index . "fallback") }} || {{ . }}{{ end }}
+echo ""
+printf '\033[34mInstalling {{.name}}\033[0m\n'
+echo ""
+{{.variabl}} /bin/bash -c "$(curl -fsSL {{ .url | quote }})"{{ with (index . "fallback") }} || {{ . }}{{ end }}
+{{ end -}}
+
+{{ range .packages.brew -}}
+echo ""
+printf '\033[34mInstalling {{.name}}\033[0m\n'
+echo ""
+brew install{{ with (index . "formula") }} {{ . }}{{ end }}{{ with (index . "cask") }} --cask {{ . }}{{ end }}
 {{ end -}}

@@ -1,14 +1,14 @@
 packages:
   curl:
-  - name: brew
+  - name: Homebrew
     url: https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
-
   - name: ohmyzsh
     url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
     fallback: "$HOME/.oh-my-zsh/tools/upgrade.sh"
-  
   - name: pnpm
     url: https://get.pnpm.io
-
   - name: nvm
     url: https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh
+  brew:
+  - name: VS Code
+    cask: visual-studio-code
