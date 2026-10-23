@@ -6,3 +6,6 @@ packages:
   - name: ohmyzsh
     url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
     fallback: "$HOME/.oh-my-zsh/tools/upgrade.sh"
+  
+  - name: pnpm
+    url: https://get.pnpm.io
