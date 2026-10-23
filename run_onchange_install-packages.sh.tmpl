@@ -1,5 +1,6 @@
 #!/bin/sh
 
 {{ range .packages.curl -}}
-/bin/bash -c "$(curl -fsSL {{ . | quote }})"
+echo "Installing {{.name}} aaa"
+/bin/bash -c "$(curl -fsSL {{ .url | quote }})"{{ with (index . "fallback") }} || {{ . }}{{ end }}
 {{ end -}}

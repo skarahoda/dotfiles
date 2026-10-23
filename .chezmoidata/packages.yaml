@@ -1,3 +1,8 @@
 packages:
   curl:
-  - https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+  - name: brew
+    url: https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+
+  - name: ohmyzsh
+    url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+    fallback: "$HOME/.oh-my-zsh/tools/upgrade.sh"
