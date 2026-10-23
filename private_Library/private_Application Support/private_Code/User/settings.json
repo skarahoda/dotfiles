@@ -1,0 +1,6 @@
+{
+    "workbench.colorTheme": "Darcula Theme from IntelliJ",
+    "explorer.confirmDelete": false,
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay"
+}
