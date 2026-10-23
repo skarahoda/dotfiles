@@ -4,7 +4,7 @@
 echo ""
 printf '\033[34mInstalling {{.name}}\033[0m\n'
 echo ""
-{{.variabl}} /bin/bash -c "$(curl -fsSL {{ .url | quote }})"{{ with (index . "fallback") }} || {{ . }}{{ end }}
+{{ range $key, $value := (index . "environment") }}{{ $key }}={{ $value }} {{ end }}/bin/bash -c "$(curl -fsSL {{ .url | quote }})"{{ with (index . "fallback") }} || {{ . }}{{ end }}
 {{ end -}}
 
 {{ range .packages.brew -}}
